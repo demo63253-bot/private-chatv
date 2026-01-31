@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>🔐 Private Space</h2>
+  <input id="pass" placeholder="Password">
+  <button onclick="login()">Enter</button>
+</div>
+
+<div id="chat" class="hidden">
+  <div id="messages"></div>
+  <div id="typing" class="hidden">Typing…</div>
+
+  <div class="input-bar">
+    <input id="input" placeholder="Message…" />
+    <button onclick="send()">➤</button>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>
